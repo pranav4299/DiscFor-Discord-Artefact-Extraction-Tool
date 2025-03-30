@@ -3,6 +3,7 @@ from os import listdir, walk, makedirs
 from os.path import dirname, join
 from pathlib import Path
 import sys
+import os
 from shutil import copytree, copy2, Error
 from time import strftime, perf_counter
 
@@ -54,6 +55,11 @@ def main_menu():
         try:
             target_path = input()
             if target_path or target_path == "":
+                if not os.path.exists(target_path):
+                    print(f"ERROR: {target_path} does not exist!")
+                else:
+                    print("Cache directory found. Listing files:")
+                    print(os.listdir(target_path))  # Shows available cache files
                 # Check if structure of a directory given by user is correct
                 if "Cache" and "Local Storage" in listdir(target_path):
                     print("Please provide output path")
