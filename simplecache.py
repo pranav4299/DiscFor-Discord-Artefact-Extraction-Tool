@@ -19,7 +19,7 @@ def read_simple_cache(discord_path, dump_dir):
     range_files = 0
     recovered = 0
     all_entries = 0
-    cache_dir = join(discord_path, "Cache")
+    cache_dir = join(discord_path, "Cache", "Cache_Data")
 
     # Read real index file containing all cache entry addresses
     cache_address_list, cache_address_data = read_real_index(cache_dir)

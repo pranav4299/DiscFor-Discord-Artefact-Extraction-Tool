@@ -18,7 +18,7 @@ def read_cache_entry(discord_path, dump_dir):
 
     reconstructed = 0
     recovered = 0
-    cache_dir = join(discord_path, "Cache")
+    cache_dir = join(discord_path, "Cache", "Cache_Data")
     ranking_list = read_rankings(cache_dir)
     all_entries = len(ranking_list)
 

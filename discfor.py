@@ -142,7 +142,7 @@ def create_recovery_dir(discord_path, output_path, backup):
 # Function responsible for creating backup folder and making a copy of the original data
 def create_backup(discord_path, output_dir):
     makedirs(join(output_dir, "Dumps"))
-    cache_path = join(discord_path, "Cache")
+    cache_path = join(discord_path, "Cache", "Cache_Data")
     # Copy Discord cache directory with all of its content
     copytree(cache_path, join(output_dir, "Dumps", "Cache"))
     activity_path = join(discord_path, "Local Storage")
